@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		152FCDEE211009FE0081EB6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152FCDED211009FE0081EB6D /* GoogleService-Info.plist */; };
+		15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC48692110090F0015BA41 /* AppDelegate.swift */; };
+		15BC486C2110090F0015BA41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC486B2110090F0015BA41 /* ViewController.swift */; };
+		15BC486F2110090F0015BA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC486D2110090F0015BA41 /* Main.storyboard */; };
+		15BC4871211009100015BA41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BC4870211009100015BA41 /* Assets.xcassets */; };
+		15BC4874211009100015BA41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC4872211009100015BA41 /* LaunchScreen.storyboard */; };
+		96605AEA7CD19289BB5DA63A /* Pods_Jardim_Irene.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58CA8449E9F3420346D941F /* Pods_Jardim_Irene.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		152FCDED211009FE0081EB6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		15BC48662110090F0015BA41 /* Jardim Irene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jardim Irene.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BC48692110090F0015BA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15BC486B2110090F0015BA41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15BC486E2110090F0015BA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15BC4870211009100015BA41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15BC4873211009100015BA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15BC4875211009100015BA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56ADF70A45122C56D131144B /* Pods-Jardim Irene.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jardim Irene.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jardim Irene/Pods-Jardim Irene.release.xcconfig"; sourceTree = "<group>"; };
+		A10C1FD9422E3E30C49C76C8 /* Pods-Jardim Irene.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jardim Irene.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jardim Irene/Pods-Jardim Irene.debug.xcconfig"; sourceTree = "<group>"; };
+		D58CA8449E9F3420346D941F /* Pods_Jardim_Irene.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jardim_Irene.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15BC48632110090F0015BA41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96605AEA7CD19289BB5DA63A /* Pods_Jardim_Irene.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15BC485D2110090F0015BA41 = {
+			isa = PBXGroup;
+			children = (
+				15BC48682110090F0015BA41 /* Jardim Irene */,
+				15BC48672110090F0015BA41 /* Products */,
+				F6D4F45265712F786EE81DA4 /* Pods */,
+				F7E82F089F5A1D5D7A046E5C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15BC48672110090F0015BA41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15BC48662110090F0015BA41 /* Jardim Irene.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15BC48682110090F0015BA41 /* Jardim Irene */ = {
+			isa = PBXGroup;
+			children = (
+				15BC48692110090F0015BA41 /* AppDelegate.swift */,
+				15BC486B2110090F0015BA41 /* ViewController.swift */,
+				15BC486D2110090F0015BA41 /* Main.storyboard */,
+				15BC4870211009100015BA41 /* Assets.xcassets */,
+				15BC4872211009100015BA41 /* LaunchScreen.storyboard */,
+				152FCDED211009FE0081EB6D /* GoogleService-Info.plist */,
+				15BC4875211009100015BA41 /* Info.plist */,
+			);
+			path = "Jardim Irene";
+			sourceTree = "<group>";
+		};
+		F6D4F45265712F786EE81DA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A10C1FD9422E3E30C49C76C8 /* Pods-Jardim Irene.debug.xcconfig */,
+				56ADF70A45122C56D131144B /* Pods-Jardim Irene.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7E82F089F5A1D5D7A046E5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D58CA8449E9F3420346D941F /* Pods_Jardim_Irene.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15BC48652110090F0015BA41 /* Jardim Irene */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BC4878211009100015BA41 /* Build configuration list for PBXNativeTarget "Jardim Irene" */;
+			buildPhases = (
+				FE8A6A48AFF71CB7613D35A2 /* [CP] Check Pods Manifest.lock */,
+				15BC48622110090F0015BA41 /* Sources */,
+				15BC48632110090F0015BA41 /* Frameworks */,
+				15BC48642110090F0015BA41 /* Resources */,
+				4267B9B1A62AF2B0DDF425E4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jardim Irene";
+			productName = "Jardim Irene";
+			productReference = 15BC48662110090F0015BA41 /* Jardim Irene.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15BC485E2110090F0015BA41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Bruno Rocca";
+				TargetAttributes = {
+					15BC48652110090F0015BA41 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 15BC48612110090F0015BA41 /* Build configuration list for PBXProject "Jardim Irene" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15BC485D2110090F0015BA41;
+			productRefGroup = 15BC48672110090F0015BA41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15BC48652110090F0015BA41 /* Jardim Irene */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15BC48642110090F0015BA41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BC4874211009100015BA41 /* LaunchScreen.storyboard in Resources */,
+				152FCDEE211009FE0081EB6D /* GoogleService-Info.plist in Resources */,
+				15BC4871211009100015BA41 /* Assets.xcassets in Resources */,
+				15BC486F2110090F0015BA41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4267B9B1A62AF2B0DDF425E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Jardim Irene/Pods-Jardim Irene-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jardim Irene/Pods-Jardim Irene-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8A6A48AFF71CB7613D35A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jardim Irene-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15BC48622110090F0015BA41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BC486C2110090F0015BA41 /* ViewController.swift in Sources */,
+				15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15BC486D2110090F0015BA41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BC486E2110090F0015BA41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15BC4872211009100015BA41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BC4873211009100015BA41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15BC4876211009100015BA41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15BC4877211009100015BA41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15BC4879211009100015BA41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10C1FD9422E3E30C49C76C8 /* Pods-Jardim Irene.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KA4J2KCXX;
+				INFOPLIST_FILE = "Jardim Irene/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bruno-Rocca.Jardim-Irene";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15BC487A211009100015BA41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56ADF70A45122C56D131144B /* Pods-Jardim Irene.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KA4J2KCXX;
+				INFOPLIST_FILE = "Jardim Irene/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bruno-Rocca.Jardim-Irene";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15BC48612110090F0015BA41 /* Build configuration list for PBXProject "Jardim Irene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BC4876211009100015BA41 /* Debug */,
+				15BC4877211009100015BA41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15BC4878211009100015BA41 /* Build configuration list for PBXNativeTarget "Jardim Irene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BC4879211009100015BA41 /* Debug */,
+				15BC487A211009100015BA41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15BC485E2110090F0015BA41 /* Project object */;
+}
