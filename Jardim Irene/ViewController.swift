@@ -10,14 +10,26 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var matchdayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        observeSingle()
         
+        let reader = FirebaseReader()
+        reader.getMatchesInfo(completion: { matchday, count in
+            // WHEN you get a callback from the completion handler,
+            print("printa da alegria: ", matchday)
+            self.matchdayLabel.text = "\(matchday)"
+            print("teste2: ", count)
+            
+            
+        })
+        
+
+        
+        //reader.getMatches(league: "BrazilSerieA", matchday: 17)
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

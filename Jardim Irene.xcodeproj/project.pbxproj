@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		152FCDEE211009FE0081EB6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152FCDED211009FE0081EB6D /* GoogleService-Info.plist */; };
+		15B51F152110E22E00AA65B5 /* FirebaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51F142110E22E00AA65B5 /* FirebaseReader.swift */; };
 		15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC48692110090F0015BA41 /* AppDelegate.swift */; };
 		15BC486C2110090F0015BA41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC486B2110090F0015BA41 /* ViewController.swift */; };
 		15BC486F2110090F0015BA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC486D2110090F0015BA41 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		152FCDED211009FE0081EB6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		15B51F142110E22E00AA65B5 /* FirebaseReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReader.swift; sourceTree = "<group>"; };
 		15BC48662110090F0015BA41 /* Jardim Irene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jardim Irene.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC48692110090F0015BA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15BC486B2110090F0015BA41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				15BC48692110090F0015BA41 /* AppDelegate.swift */,
 				15BC486B2110090F0015BA41 /* ViewController.swift */,
+				15B51F142110E22E00AA65B5 /* FirebaseReader.swift */,
 				15BC486D2110090F0015BA41 /* Main.storyboard */,
 				15BC4870211009100015BA41 /* Assets.xcassets */,
 				15BC4872211009100015BA41 /* LaunchScreen.storyboard */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BC486C2110090F0015BA41 /* ViewController.swift in Sources */,
+				15B51F152110E22E00AA65B5 /* FirebaseReader.swift in Sources */,
 				15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
