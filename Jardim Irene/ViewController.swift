@@ -9,12 +9,18 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    var homeInfo: [String] = []
     
-    @IBOutlet weak var matchdayLabel: UILabel!
+    @IBOutlet var tableView: UITableView!
+    
+    let cellIdentifier = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         let reader = FirebaseReader()
         //chamando funções com completion para sincronizar com o load do Firebase
@@ -22,15 +28,49 @@ class ViewController: UIViewController {
             reader.getTeamsInfo(completion: { teamsList in
                 
                 print("print da alegria: ", matchday)
-                self.matchdayLabel.text = "\(matchday)"
                 //print("teste2: ", matchesList)
                 print("teste3: ", teamsList)
+                
+                //pegando a informação de jogos jogados
+                let gamesPlayed = ((teamsList[0]["won"]! as! Int) + (teamsList[0]["draw"]! as! Int) + (teamsList[0]["lost"]! as! Int))
+                
+                //jogando informações do time da casa
+                self.homeInfo.append("\(teamsList[0]["position"]!)")
+                self.homeInfo.append("\(teamsList[0]["points"]!)")
+                self.homeInfo.append("\(gamesPlayed)")
+                self.homeInfo.append("\(teamsList[0]["won"]!)")
+                self.homeInfo.append("\(teamsList[0]["draw"]!)")
+                self.homeInfo.append("\(teamsList[0]["lost"]!)")
+                self.homeInfo.append("\(teamsList[0]["goalsFor"]!)")
+                self.homeInfo.append("\(teamsList[0]["goalsAgainst"]!)")
+                self.homeInfo.append("\(teamsList[0]["goalDifference"]!)")
+                
+                //atualizando table view
+                self.tableView.reloadData()
             })
             
         })
         
     }
+    //retorna a quantidade de células da table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.homeInfo.count
+    }
+    //retorna a célula costumizada para a table view
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:ComparationCell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! ComparationCell
+        
+        cell.homeLabel.text = self.homeInfo[indexPath.row]
+        
+        return cell
+    }
+    //retorna o tamanho de célula
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100)
+    }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

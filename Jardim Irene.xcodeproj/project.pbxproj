@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		152FCDEE211009FE0081EB6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152FCDED211009FE0081EB6D /* GoogleService-Info.plist */; };
+		153A4BDD21116BAF001DB11B /* ComparationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A4BDC21116BAF001DB11B /* ComparationCell.swift */; };
+		153A4BDF211174C6001DB11B /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A4BDE211174C6001DB11B /* MatchesViewController.swift */; };
+		153A4BE1211174DB001DB11B /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A4BE0211174DB001DB11B /* MatchesCell.swift */; };
 		15B51F152110E22E00AA65B5 /* FirebaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51F142110E22E00AA65B5 /* FirebaseReader.swift */; };
 		15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC48692110090F0015BA41 /* AppDelegate.swift */; };
 		15BC486C2110090F0015BA41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC486B2110090F0015BA41 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		152FCDED211009FE0081EB6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		153A4BDC21116BAF001DB11B /* ComparationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparationCell.swift; sourceTree = "<group>"; };
+		153A4BDE211174C6001DB11B /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		153A4BE0211174DB001DB11B /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
 		15B51F142110E22E00AA65B5 /* FirebaseReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReader.swift; sourceTree = "<group>"; };
 		15BC48662110090F0015BA41 /* Jardim Irene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jardim Irene.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC48692110090F0015BA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +72,12 @@
 			isa = PBXGroup;
 			children = (
 				15BC48692110090F0015BA41 /* AppDelegate.swift */,
-				15BC486B2110090F0015BA41 /* ViewController.swift */,
 				15B51F142110E22E00AA65B5 /* FirebaseReader.swift */,
 				15BC486D2110090F0015BA41 /* Main.storyboard */,
+				153A4BE0211174DB001DB11B /* MatchesCell.swift */,
+				15BC486B2110090F0015BA41 /* ViewController.swift */,
+				153A4BDE211174C6001DB11B /* MatchesViewController.swift */,
+				153A4BDC21116BAF001DB11B /* ComparationCell.swift */,
 				15BC4870211009100015BA41 /* Assets.xcassets */,
 				15BC4872211009100015BA41 /* LaunchScreen.storyboard */,
 				152FCDED211009FE0081EB6D /* GoogleService-Info.plist */,
@@ -212,8 +221,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BC486C2110090F0015BA41 /* ViewController.swift in Sources */,
+				153A4BDD21116BAF001DB11B /* ComparationCell.swift in Sources */,
+				153A4BDF211174C6001DB11B /* MatchesViewController.swift in Sources */,
 				15B51F152110E22E00AA65B5 /* FirebaseReader.swift in Sources */,
 				15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */,
+				153A4BE1211174DB001DB11B /* MatchesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
