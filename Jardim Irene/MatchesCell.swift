@@ -10,4 +10,5 @@ import UIKit
 
 class MatchesCell: UITableViewCell {
     @IBOutlet weak var teamHome: UILabel!
+    @IBOutlet weak var homeImage: UIImageView!
 }

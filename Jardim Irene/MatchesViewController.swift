@@ -11,6 +11,7 @@ import UIKit
 class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var homeTeam: [String] = []
+    var homeImage: [UIImage] = []
     
     @IBOutlet var tableView: UITableView!
 
@@ -32,7 +33,7 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print("teste3: ", teamsList)
                 
                 self.homeTeam.append("bob")
-                
+                self.homeImage.append(UIImage(named: "1765")!)
                 self.tableView.reloadData()
             })
             
@@ -47,6 +48,7 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell:MatchesCell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MatchesCell
         
         cell.teamHome.text = self.homeTeam[indexPath.row]
+        cell.homeImage.image = self.homeImage[indexPath.row]
         
         return cell
     }

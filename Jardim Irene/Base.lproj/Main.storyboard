@@ -44,6 +44,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="homeImage" destination="eaI-ZO-a8f" id="sD3-o7-fjr"/>
                                             <outlet property="teamHome" destination="zYX-HM-p3y" id="rzO-ud-fId"/>
                                         </connections>
                                     </tableViewCell>
