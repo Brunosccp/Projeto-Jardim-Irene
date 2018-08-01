@@ -12,15 +12,16 @@ import Firebase
 class FirebaseReader{
     let ref = Database.database().reference()
     
-    func getMatchesInfo(completion: @escaping (_ matchday: Int, _ count: [[String : Any]]) -> Void) {
-        //obtendo referencia de matches
+    func getMatchesInfo(completion: @escaping (_ matchday: Int, _ matchesList: [[String : Any]]) -> Void) {
+        //criando lista de matches
         var matchesList: [[String : Any]] = []
         
+        //obtendo referencia de matches
         ref.child("BrazilSerieA").child("matches").observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
             let matchday = value!["currentMatchday"] as? Int
             
-            //obtendo cada key de cada partida
+            //percorrendo cada key de cada partida
             for key in value!.allKeys{
                 self.ref.child("BrazilSerieA").child("matches").child("\(key)").observeSingleEvent(of: .value, with: {(snapshot2) in
                     let value2 = snapshot2.value as? NSDictionary
@@ -28,17 +29,44 @@ class FirebaseReader{
                     //testando se é partida (por causa do currentMatchday) e se a partida é da rodada atual
                     if(value2?["homeTeamID"] != nil && value2?["matchday"] as? Int == matchday){
                         //convertendo NSDictionary para [String : Any] e assim, jogando na lista
-                        let mom = value2! as! [String : Any]
-                        matchesList.append(mom)
+                        let match = value2! as! [String : Any]
+                        matchesList.append(match)
                         
                     }   //chegou no matchday, vulgo ultima informação de matches, então retorna
                     else{
-                        //print(matchesList)
                         completion(matchday!, matchesList)
                     }
                     
                 })
             }
+        })
+    }
+    
+    func getTeamsInfo(completion: @escaping (_ teamsList: [[String : Any]]) -> Void){
+        var teamsList: [[String : Any]] = []
+        
+        ref.child("BrazilSerieA").child("teams").observeSingleEvent(of: .value, with: {(snapshot) in
+            let value = snapshot.value as? NSDictionary
+            
+            //percorrendo cada key de cada time
+            for key in value!.allKeys{
+                self.ref.child("BrazilSerieA").child("teams").child("\(key)").observeSingleEvent(of: .value, with: {(snapshot2) in
+                    let value2 = snapshot2.value as? NSDictionary
+                    
+                    if(value2?["id"] != nil){
+                        let team = value2! as! [String : Any]
+                        teamsList.append(team)
+                        
+                    }else{  //chegou na marcação x, então retorna
+                        completion(teamsList)
+                    }
+                    
+                    
+                    //print(value2)
+                    
+                })
+            }
+            
         })
     }
 }

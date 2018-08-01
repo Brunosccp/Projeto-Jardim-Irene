@@ -17,18 +17,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let reader = FirebaseReader()
-        reader.getMatchesInfo(completion: { matchday, count in
-            // WHEN you get a callback from the completion handler,
-            print("printa da alegria: ", matchday)
-            self.matchdayLabel.text = "\(matchday)"
-            print("teste2: ", count)
-            
+        //chamando funções com completion para sincronizar com o load do Firebase
+        reader.getMatchesInfo(completion: { matchday, matchesList in
+            reader.getTeamsInfo(completion: { teamsList in
+                
+                print("print da alegria: ", matchday)
+                self.matchdayLabel.text = "\(matchday)"
+                //print("teste2: ", matchesList)
+                print("teste3: ", teamsList)
+            })
             
         })
         
-
-        
-        //reader.getMatches(league: "BrazilSerieA", matchday: 17)
     }
 
     override func didReceiveMemoryWarning() {
