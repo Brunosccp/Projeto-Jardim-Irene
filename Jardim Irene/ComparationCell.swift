@@ -11,4 +11,6 @@ import UIKit
 class ComparationCell: UITableViewCell {
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var awayLabel: UILabel!
+    
+    @IBOutlet weak var infoLabel: UILabel!
 }

@@ -48,20 +48,23 @@ class FirebaseReader{
         ref.child("BrazilSerieA").child("teams").observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
             
+            //print("todas as keys: ",value!.allKeys)
+            let lastKey = value!.allKeys[value!.count - 1] as! String
+
             //percorrendo cada key de cada time
             for key in value!.allKeys{
                 self.ref.child("BrazilSerieA").child("teams").child("\(key)").observeSingleEvent(of: .value, with: {(snapshot2) in
                     let value2 = snapshot2.value as? NSDictionary
                     
-                    if(value2?["id"] != nil){
-                        let team = value2! as! [String : Any]
-                        teamsList.append(team)
-                        
-                    }else{  //chegou na marcação x, então retorna
+                    let team = value2! as! [String : Any]
+                    //print("time achado pelo getTeams:", team["name"])
+                    teamsList.append(team)
+                    
+                    //se for a ultima key retorna
+                    if(key as! String == lastKey){
                         completion(teamsList)
                     }
-                    
-                    
+
                     //print(value2)
                     
                 })

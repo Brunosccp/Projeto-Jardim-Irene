@@ -16,6 +16,9 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     var awayTeam: [String] = []
     var awayImage: [UIImage] = []
     
+    var matchID: [Int] = []
+    var cellTapped: Int = -1
+    
     @IBOutlet var tableView: UITableView!
 
     let cellIdentifier = "matchCell"
@@ -32,8 +35,8 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
             reader.getTeamsInfo(completion: { teamsList in
                 
                 print("print da alegria: ", matchday)
-                //print("teste2: ", matchesList)
-                print("teste3: ", teamsList)
+                print("teste2: ", matchesList)
+                //print("teste3: ", teamsList)
                 
                 for i in 0..<matchesList.count{
                     let homeTeamID = matchesList[i]["homeTeamID"] as! Int
@@ -65,6 +68,8 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.awayTeam.append(awayTeamName)
                     self.awayImage.append(UIImage(named: "\(awayTeamID)")!)
                     
+                    self.matchID.append(matchesList[i]["id"] as! Int)
+                    
                 }
                 
                 self.tableView.reloadData()
@@ -81,6 +86,7 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell:MatchesCell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MatchesCell
         
         cell.teamHome.text = self.homeTeam[indexPath.row]
+        cell.teamHome.sizeToFit()
         cell.homeImage.image = self.homeImage[indexPath.row]
         cell.teamAway.text = self.awayTeam[indexPath.row]
         cell.awayImage.image = self.awayImage[indexPath.row]
@@ -94,6 +100,10 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     //funcao que habilita qual célula foi clicada
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        print("id da partida: ", matchID[indexPath.row])
+        cellTapped = indexPath.row
+        
+        performSegue(withIdentifier: "matchToComparation", sender: matchID)
     }
     
     
@@ -101,7 +111,13 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "matchToComparation") {
+            // pass data to next view
+            let match = segue.destination as! ViewController
+            match.matchID = matchID[cellTapped]
+        }
+    }
 
     /*
     // MARK: - Navigation
