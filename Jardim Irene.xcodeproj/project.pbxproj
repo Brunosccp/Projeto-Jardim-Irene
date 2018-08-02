@@ -11,11 +11,11 @@
 		153A4BDD21116BAF001DB11B /* ComparationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A4BDC21116BAF001DB11B /* ComparationCell.swift */; };
 		153A4BDF211174C6001DB11B /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A4BDE211174C6001DB11B /* MatchesViewController.swift */; };
 		153A4BE1211174DB001DB11B /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A4BE0211174DB001DB11B /* MatchesCell.swift */; };
+		15648F1A2112BE4300F0EA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15648F192112BE4300F0EA03 /* Assets.xcassets */; };
 		15B51F152110E22E00AA65B5 /* FirebaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51F142110E22E00AA65B5 /* FirebaseReader.swift */; };
 		15BC486A2110090F0015BA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC48692110090F0015BA41 /* AppDelegate.swift */; };
 		15BC486C2110090F0015BA41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC486B2110090F0015BA41 /* ViewController.swift */; };
 		15BC486F2110090F0015BA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC486D2110090F0015BA41 /* Main.storyboard */; };
-		15BC4871211009100015BA41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BC4870211009100015BA41 /* Assets.xcassets */; };
 		15BC4874211009100015BA41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC4872211009100015BA41 /* LaunchScreen.storyboard */; };
 		96605AEA7CD19289BB5DA63A /* Pods_Jardim_Irene.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58CA8449E9F3420346D941F /* Pods_Jardim_Irene.framework */; };
 /* End PBXBuildFile section */
@@ -25,12 +25,12 @@
 		153A4BDC21116BAF001DB11B /* ComparationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparationCell.swift; sourceTree = "<group>"; };
 		153A4BDE211174C6001DB11B /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		153A4BE0211174DB001DB11B /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		15648F192112BE4300F0EA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B51F142110E22E00AA65B5 /* FirebaseReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReader.swift; sourceTree = "<group>"; };
 		15BC48662110090F0015BA41 /* Jardim Irene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jardim Irene.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC48692110090F0015BA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15BC486B2110090F0015BA41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15BC486E2110090F0015BA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		15BC4870211009100015BA41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15BC4873211009100015BA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15BC4875211009100015BA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ADF70A45122C56D131144B /* Pods-Jardim Irene.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jardim Irene.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jardim Irene/Pods-Jardim Irene.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +76,9 @@
 				15BC486D2110090F0015BA41 /* Main.storyboard */,
 				153A4BE0211174DB001DB11B /* MatchesCell.swift */,
 				153A4BDC21116BAF001DB11B /* ComparationCell.swift */,
+				15648F192112BE4300F0EA03 /* Assets.xcassets */,
 				15BC486B2110090F0015BA41 /* ViewController.swift */,
 				153A4BDE211174C6001DB11B /* MatchesViewController.swift */,
-				15BC4870211009100015BA41 /* Assets.xcassets */,
 				15BC4872211009100015BA41 /* LaunchScreen.storyboard */,
 				152FCDED211009FE0081EB6D /* GoogleService-Info.plist */,
 				15BC4875211009100015BA41 /* Info.plist */,
@@ -165,7 +165,7 @@
 			files = (
 				15BC4874211009100015BA41 /* LaunchScreen.storyboard in Resources */,
 				152FCDEE211009FE0081EB6D /* GoogleService-Info.plist in Resources */,
-				15BC4871211009100015BA41 /* Assets.xcassets in Resources */,
+				15648F1A2112BE4300F0EA03 /* Assets.xcassets in Resources */,
 				15BC486F2110090F0015BA41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

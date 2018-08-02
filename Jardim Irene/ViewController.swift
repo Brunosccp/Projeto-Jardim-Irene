@@ -24,6 +24,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var homeImg: UIImageView!
     @IBOutlet weak var awayImg: UIImageView!
     
+    //label com nome dos times
+    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var awayLabel: UILabel!
+    
     //declarando gráficos
     @IBOutlet weak var resultChart: PieChartView!
     @IBOutlet weak var twoGoalsChart: PieChartView!
@@ -65,18 +69,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         twoGoalsChart.chartDescription?.text = ""
         twoGoalsChart.legend.enabled = false
         
-        
-        
-        
+        //criando a variável que puxa as informações do Firebase
         let reader = FirebaseReader()
         //chamando funções com completion para sincronizar com o load do Firebase
         reader.getMatchesInfo(completion: { matchday, matchesList in
             reader.getTeamsInfo(completion: { teamsList in
-                
-                //print("teste2: ", matchesList)
-                //print("teste3: ", teamsList)
-                //print("id da partida no viewController: ",self.matchID)
-                
                 //achando qual a posição da partida no array
                 var matchArray = -1
                 
@@ -86,7 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         break
                     }
                 }
-                
                 var homeTeamID = matchesList[matchArray]["homeTeamID"] as! Int
                 var awayTeamID = matchesList[matchArray]["awayTeamID"] as! Int
                 
@@ -141,6 +137,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 //atualizando img dos times
                 self.homeImg.image = UIImage(named: "\(homeTeamID)")
                 self.awayImg.image = UIImage(named: "\(awayTeamID)")
+                
+                
+                
+                //pegando nome dos times e atualizando label
+                let homeTeamName = teamsList[homeTeamArray]["name"] as! String
+                let awayTeamName = teamsList[awayTeamArray]["name"] as! String
+                self.homeLabel.text = homeTeamName
+                self.homeLabel.textAlignment = .center
+                self.homeLabel.center.x = 56
+                self.homeLabel.sizeToFit()
+                self.awayLabel.text = awayTeamName
+                self.awayLabel.center.x = 281
+                self.awayLabel.sizeToFit()
                 
                 //jogando dados nos gráficos
                 self.homeOddEntry.value = (matchesList[matchArray]["homeWinOdd"] as! Double) * 100
