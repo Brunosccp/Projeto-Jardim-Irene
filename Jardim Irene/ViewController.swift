@@ -17,6 +17,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var info = ["Posição", "Pontos", "Jogos", "Vitórias", "Derrotas", "Empates", "Gols Pró", "Gols Contra", "Saldo de Gols"]
     
+    //botão de voltar
+    @IBOutlet weak var back: UIImageView!
+    
     //img dos times que vão se enfrentar
     @IBOutlet weak var homeImg: UIImageView!
     @IBOutlet weak var awayImg: UIImageView!
@@ -45,6 +48,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //criando gesture pra ligar com o botao de voltar
+        var tapRecognizer: UITapGestureRecognizer
+        back.isUserInteractionEnabled = true
+        tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(backTapped))
+        back.addGestureRecognizer(tapRecognizer)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -215,20 +224,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func observeSingle(){
-        let ref = Database.database().reference()
-        
-        ref.child("BrazilSerieA").child("teams").child("1765").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            
-            let name = value?["name"] as? String ?? ""
-            let points = value?["points"] as? Int
-            print("name:", name)
-            print(points!)
-        }) { (error) in
-            print(error.localizedDescription)
-        }
+    @objc func backTapped(recognizer: UITapGestureRecognizer){
+        performSegue(withIdentifier: "comparationToMatch", sender: nil)
     }
 
 }

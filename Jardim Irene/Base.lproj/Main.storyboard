@@ -141,45 +141,49 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="evu-sw-e0d"/>
                                 </connections>
                             </tableView>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLx-mC-sBT" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="199" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92203826850914872" green="1" blue="0.52016127318264305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51z-iW-bcz" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="209" y="199" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.28906623479999999" blue="0.40440353870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8An-w6-vOq">
-                                <rect key="frame" x="31" y="56" width="100" height="100"/>
+                                <rect key="frame" x="33" y="91" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-RJ-c1y">
-                                <rect key="frame" x="240" y="56" width="100" height="100"/>
+                                <rect key="frame" x="242" y="91" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBC-4J-kOP">
-                                <rect key="frame" x="181" y="96" width="12" height="21"/>
+                                <rect key="frame" x="183" y="131" width="12" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLx-mC-sBT" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="199" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92203826850914872" green="1" blue="0.52016127318264305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mandante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTa-Py-idk">
-                                <rect key="frame" x="43" y="27" width="77" height="21"/>
+                                <rect key="frame" x="45" y="62" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visitante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5K-mb-Nwh">
-                                <rect key="frame" x="257" y="27" width="67" height="21"/>
+                                <rect key="frame" x="259" y="62" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51z-iW-bcz" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="209" y="199" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.28906623479999999" blue="0.40440353870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="left-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="97E-23-Lu5">
+                                <rect key="frame" x="16" y="25" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -192,10 +196,12 @@
                     </view>
                     <connections>
                         <outlet property="awayImg" destination="ZtZ-RJ-c1y" id="5wd-aS-0aV"/>
+                        <outlet property="back" destination="97E-23-Lu5" id="8Rp-Pg-qHx"/>
                         <outlet property="homeImg" destination="8An-w6-vOq" id="lb6-yu-89C"/>
                         <outlet property="resultChart" destination="DLx-mC-sBT" id="1y6-e8-EDR"/>
                         <outlet property="tableView" destination="t2A-n1-OfC" id="Vkn-mc-IdS"/>
                         <outlet property="twoGoalsChart" destination="51z-iW-bcz" id="3YC-be-jMP"/>
+                        <segue destination="0tw-TX-qih" kind="show" identifier="comparationToMatch" id="kmy-mK-gpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -203,4 +209,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left-arrow" width="512" height="512"/>
+    </resources>
 </document>
