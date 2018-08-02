@@ -145,11 +145,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let awayTeamName = teamsList[awayTeamArray]["name"] as! String
                 self.homeLabel.text = homeTeamName
                 self.homeLabel.textAlignment = .center
-                self.homeLabel.center.x = 56
                 self.homeLabel.sizeToFit()
+                self.homeLabel.center.x = 88
                 self.awayLabel.text = awayTeamName
-                self.awayLabel.center.x = 281
                 self.awayLabel.sizeToFit()
+                self.awayLabel.center.x = 286
                 
                 //jogando dados nos gráficos
                 self.homeOddEntry.value = (matchesList[matchArray]["homeWinOdd"] as! Double) * 100
