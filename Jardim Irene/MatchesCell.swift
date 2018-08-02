@@ -14,4 +14,6 @@ class MatchesCell: UITableViewCell {
     
     @IBOutlet weak var teamAway: UILabel!
     @IBOutlet weak var awayImage: UIImageView!
+    
+    @IBOutlet weak var date: UILabel!
 }

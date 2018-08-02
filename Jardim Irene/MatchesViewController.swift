@@ -9,14 +9,20 @@
 import UIKit
 
 class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+    //imagem e string referente ao time da casa
     var homeTeam: [String] = []
     var homeImage: [UIImage] = []
     
+    //imagem e string referente ao time de fora
     var awayTeam: [String] = []
     var awayImage: [UIImage] = []
     
+    //label referente a data
+    var date: [String] = []
+    
+    //vetor que guarda os id's da partida em ordem
     var matchID: [Int] = []
+    
     var cellTapped: Int = -1
     
     @IBOutlet var tableView: UITableView!
@@ -45,6 +51,10 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
                     var awayTeamID = matchesList[i]["awayTeamID"] as! Int
                     var awayTeamName = ""
                     
+                    //arrumando data
+                    let utcDate = matchesList[i]["utcDate"] as! String
+                    self.setDate(gameDate: utcDate)
+                    
                     //consertando cagada da api 2.0
                     if(awayTeamID == 1839){
                         awayTeamID = 6684
@@ -59,9 +69,6 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
                             awayTeamName = teamsList[j]["name"] as! String
                         }
                     }
-                    
-                    print("nome do time da casa: ", homeTeamName)
-                    print("id do time visitante", awayTeamID)
                     
                     self.homeTeam.append(homeTeamName)
                     self.homeImage.append(UIImage(named: "\(homeTeamID)")!)
@@ -78,6 +85,7 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         })
         
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.homeTeam.count
     }
@@ -91,16 +99,19 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.homeImage.image = self.homeImage[indexPath.row]
         
         cell.teamAway.text = self.awayTeam[indexPath.row]
-        cell.teamAway.textAlignment = .center
         cell.teamAway.sizeToFit()
         cell.teamAway.center.x = 286
         cell.awayImage.image = self.awayImage[indexPath.row]
+        
+        cell.date.text = self.date[indexPath.row]
+        cell.date.sizeToFit()
+        cell.date.center.x = self.view.center.x
         
         return cell
     }
     //retorna o tamanho de célula
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(120)
+        return CGFloat(150)
     }
     //funcao que habilita qual célula foi clicada
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -110,6 +121,24 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "matchToComparation", sender: matchID)
     }
     
+    func setDate(gameDate: String){
+        //arrumando calendário para atual
+        let calendar = Calendar.current
+        
+        //transformando a string no formate de date
+        let dateFormatter = ISO8601DateFormatter()
+        let rawDate = dateFormatter.date(from: gameDate)
+        
+        //transformando date para dateComponents no fuso certo
+        var dateComponents = calendar.dateComponents([.day, .month, .weekday, .hour, .minute], from: rawDate!)
+        dateComponents.timeZone = TimeZone.current
+        
+        let day = String(format: "%02d", dateComponents.day!) + "/" + String(format: "%02d", dateComponents.month!)
+        let hour = String(format: "%02d", dateComponents.hour!) + ":" + String(format: "%02d", dateComponents.minute!)
+        self.date.append(day + " - " + hour)
+        
+        //print("data do jogo: ",self.date)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
