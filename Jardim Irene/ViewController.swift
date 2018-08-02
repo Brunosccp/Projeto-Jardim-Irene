@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Charts
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //informações dos times que vão se enfrentar
@@ -20,9 +21,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var homeImg: UIImageView!
     @IBOutlet weak var awayImg: UIImageView!
     
+    //declarando gráficos
+    @IBOutlet weak var resultChart: PieChartView!
+    @IBOutlet weak var twoGoalsChart: PieChartView!
+    
+    //criando variáveis dos gráficos que recebem valores
+    var homeOddEntry = PieChartDataEntry(value: 0)
+    var awayOddEntry = PieChartDataEntry(value: 0)
+    var drawOddEntry = PieChartDataEntry(value: 0)
+    var moreTwoGoals = PieChartDataEntry(value: 0)
+    var noMoreTwoGoals = PieChartDataEntry(value: 0)
+    
+    
+    var oddsEntry = [PieChartDataEntry]()
+    var twoGoalsEntry = [PieChartDataEntry]()
+    
     //id da partida (recebe de um segue)
     var matchID: Int = -1
-    
     
     @IBOutlet var tableView: UITableView!
     
@@ -33,6 +48,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //criando gráficos
+        resultChart.chartDescription?.text = ""
+        resultChart.legend.enabled = false
+        
+        twoGoalsChart.chartDescription?.text = ""
+        twoGoalsChart.legend.enabled = false
+        
+        
+        
         
         let reader = FirebaseReader()
         //chamando funções com completion para sincronizar com o load do Firebase
@@ -108,6 +133,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.homeImg.image = UIImage(named: "\(homeTeamID)")
                 self.awayImg.image = UIImage(named: "\(awayTeamID)")
                 
+                //jogando dados nos gráficos
+                self.homeOddEntry.value = (matchesList[matchArray]["homeWinOdd"] as! Double) * 100
+                self.homeOddEntry.label = "Mandante"
+                self.awayOddEntry.value = (matchesList[matchArray]["awayWinOdd"] as! Double) * 100
+                self.awayOddEntry.label = "Visitante"
+                self.drawOddEntry.value = (matchesList[matchArray]["drawOdd"] as! Double) * 100
+                self.drawOddEntry.label = "Empate"
+                
+                self.oddsEntry = [self.homeOddEntry, self.awayOddEntry, self.drawOddEntry]
+                
+                self.moreTwoGoals.value = (matchesList[matchArray]["moreThan2GoalsOdd"] as! Double) * 100
+                self.moreTwoGoals.label = "Mais de 2 gols"
+                self.noMoreTwoGoals.value = (1.0 - (matchesList[matchArray]["moreThan2GoalsOdd"] as! Double)) * 100
+                self.noMoreTwoGoals.label = "Menos de 2 gols"
+                
+                self.twoGoalsEntry = [self.moreTwoGoals, self.noMoreTwoGoals]
+                
+                //atualizando gráficos
+                self.updateCharts()
+                
                 //atualizando table view
                 self.tableView.reloadData()
             })
@@ -115,6 +160,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
         
     }
+    
+    //atualiza os gráficos
+    func updateCharts(){
+        //atualizando as odds
+        let chartDataSetOdds = PieChartDataSet(values: oddsEntry, label: nil)
+        let chartDataOdds = PieChartData(dataSet: chartDataSetOdds)
+        chartDataSetOdds.sliceSpace = (2.0)
+        
+        //atualizando odd de 2 gols
+        let chartDataSetTwoGoals = PieChartDataSet(values: twoGoalsEntry, label: nil)
+        let chartDataTwoGoals = PieChartData(dataSet: chartDataSetTwoGoals)
+        chartDataSetTwoGoals.sliceSpace = (2.0)
+        
+        //adicionado cor nas odds
+        let colorsOdds = [UIColor.red.withAlphaComponent(0.6), UIColor.blue.withAlphaComponent(0.6), UIColor.yellow.withAlphaComponent(0.6)]
+        chartDataSetOdds.colors = colorsOdds
+        
+        //adicionando cor na odd de 2 gols
+        let colorsTwoGoals = [UIColor.orange.withAlphaComponent(0.6), UIColor.cyan.withAlphaComponent(0.6)]
+        chartDataSetTwoGoals.colors = colorsTwoGoals
+        
+        resultChart.data = chartDataOdds
+        resultChart.data?.setValueTextColor(UIColor.darkText)
+        
+        twoGoalsChart.data = chartDataTwoGoals
+        twoGoalsChart.data?.setValueTextColor(UIColor.darkText)
+    }
+    
     //retorna a quantidade de células da table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.homeInfo.count
@@ -128,7 +201,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.infoLabel.text = self.info[indexPath.row]
         cell.infoLabel.sizeToFit()
-        cell.infoLabel.center.x = self.view.center.x3eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        cell.infoLabel.center.x = self.view.center.x
         
         return cell
     }
@@ -137,7 +210,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return CGFloat(50)
     }
 
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

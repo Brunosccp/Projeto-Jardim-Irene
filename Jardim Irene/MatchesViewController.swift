@@ -87,8 +87,13 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.teamHome.text = self.homeTeam[indexPath.row]
         cell.teamHome.sizeToFit()
+        cell.teamHome.center.x = 90
         cell.homeImage.image = self.homeImage[indexPath.row]
+        
         cell.teamAway.text = self.awayTeam[indexPath.row]
+        cell.teamAway.textAlignment = .center
+        cell.teamAway.sizeToFit()
+        cell.teamAway.center.x = 286
         cell.awayImage.image = self.awayImage[indexPath.row]
         
         return cell
@@ -99,8 +104,7 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     //funcao que habilita qual célula foi clicada
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
-        print("id da partida: ", matchID[indexPath.row])
+        //print("id da partida: ", matchID[indexPath.row])
         cellTapped = indexPath.row
         
         performSegue(withIdentifier: "matchToComparation", sender: matchID)

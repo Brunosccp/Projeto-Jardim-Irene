@@ -9,5 +9,6 @@ target 'Jardim Irene' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Charts'
 
 end
